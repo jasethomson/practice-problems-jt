@@ -8,7 +8,7 @@
   - the feedback in test.html will tell you what arguments the function will receive
   - the feedback in test.html will tell you what return value is expected from your function
   - multiple tests will be run on your function.  A solution that may work for one test may not work for the other tests.
-  
+
 - <a href="https://github.com/Learning-Fuze/practice-problems/blob/master/drills01/README.md" target="_blank">sumArray<br>fitWithinVal<br>getAllNamesShorterThan<br>makeLabel</a>
 - <a href="https://github.com/Learning-Fuze/practice-problems/blob/master/drills02/README.md" target="_blank">countOccurences<br>wordLengths<br>getMinMaxMean<br>findMode</a>
 - <a href="https://github.com/Learning-Fuze/practice-problems/blob/master/drills03/README.md" target="_blank">getPath<br>getPathParts<br>getCapitalCount<br>correctCalcChecker</a>
@@ -41,7 +41,7 @@
 - <a href="practice11/README.md" target="_blank">Even Odds</a>
 - <a href="practice13/README.md" target="_blank">Math Computation Sequences</a>
 - <a href="practice17/README.md" target="_blank">Skippy Numbers</a>
-- <a href="practice11/README.md" target="_blank">Sort Objects</a>
+- <a href="practice19/README.md" target="_blank">Sort Objects</a>
 - <a href="practice22/README.md" target="_blank">Sort Objects by field</a>
 - <a href="practice25/README.md" target="_blank">Array Add</a>
 - <a href="practice26/README.md" target="_blank">Search Array</a>
