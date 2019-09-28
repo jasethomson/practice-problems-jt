@@ -1,4 +1,3 @@
-
 function sumArray(array){
   var index = 0;
   var sum = 0;
@@ -15,7 +14,6 @@ function fitWithinVal(array, number){
   var sum = 0;
   for (var index = 0;index<array.length; index++){
     sum += array[index];
-    //var sumAfterNextNum = su
     if(sum < number){
       newArray.push(array[index]);
     } else {
@@ -29,7 +27,6 @@ function getAllNamesShorterThan(array, value){
 
   var newArray = [];
   for(var index =0; index<array.length; index++){
-    //debugger;
     var name = array[index];
     if(name.length < value ){
       newArray.push(name);
