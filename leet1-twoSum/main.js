@@ -8,7 +8,7 @@ function addUpToTarget(array, target){
         let numY = array[innerCounter];
         let test = numX + numY;
         if(test === target){
-          const returnArray = [numX, numY];
+          const returnArray = [outerCounter, innerCounter];
           return returnArray;
         }
       }
@@ -18,6 +18,6 @@ function addUpToTarget(array, target){
   }
 }
 
-const testArray = [2, 7, 11, 15];
+const testArray = [11, 15, 2, 7];
 
 addUpToTarget(testArray, 9);
