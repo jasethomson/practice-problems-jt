@@ -1,10 +1,11 @@
 function find_middle_letters(string){
-  console.log(string.length/2);
-  var middleLetter;
-  if(string.length % 2 === 0){
-    middleLetter = string[(string.length / 2) - 1] + string[string.length / 2];
+
+  if(string.length % 2 !== 0){
+    return string[Math.floor( (string.length-1) / 2)];
   } else {
-    middleLetter = string[(Math.floor(string.length / 2))];
+    return (string[Math.floor((string.length - 1) / 2)] + string[Math.ceil((string.length - 1) / 2)]);
   }
-  return middleLetter;
 }
+
+console.log("result:", find_middle_letters('dish'));
+
