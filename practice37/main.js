@@ -1,15 +1,15 @@
-function capitalizeEveryOtherLetter(string){
-  var stringToReturn = "";
-  var charPlace = 0;
-  var tempHolder = "";
-  while(charPlace<string.length){
-    if(charPlace % 2 === 0){
-      stringToReturn += string[charPlace];
-    } else {
-      tempHolder = string[charPlace];
-      stringToReturn += tempHolder.toUpperCase();
+function altCaps(str){
+  let result = "";
+  for(let index = 0; index < str.length; index++){
+    if(index % 2 !== 0){
+      let tempStr = str[index];
+      tempStr = tempStr.toUpperCase();
+      result+=tempStr;
+    } else{
+      result+=str[index];
     }
-    charPlace++;
   }
-  return stringToReturn;
+  return result;
 }
+
+console.log("result:",altCaps("amazing"));

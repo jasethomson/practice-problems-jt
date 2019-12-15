@@ -1,29 +1,22 @@
-function groupArray(array){
-  var currentPosition = 0;
-  var lengthOfArray = array.length;
-  var arrayToReturn = [];
-  var data = array[currentPosition];
-  var typeOfData = typeof data;
-  var stringTempHolder = [];
-  var numberTempHolder = [];
-  var booleanTempHolder = [];
-  while( currentPosition < lengthOfArray ){
-    switch (typeOfData){
-        case 'string':
-          stringTempHolder.push(array[currentPosition]);
-          break;
-        case 'number':
-          numberTempHolder.push(array[currentPosition]);
-          break;
-        case 'boolean':
-          booleanTempHolder.push(array[currentPosition]);
+
+function groupArray(arr){
+  const rtrnArr = [];
+  const strArr = [];
+  const numArr = [];
+  const boolArr = [];
+  let count = 0;
+  while(count < arr.length){
+    switch(typeof arr[count]){
+      case "string": strArr.push(arr[count]);
+        break;
+      case "number": numArr.push(arr[count]);
+        break;
+      case "boolean": boolArr.push(arr[count]);
     }
-    currentPosition++;
-    data = array[currentPosition];
-    typeOfData = typeof data;
+    count++;
   }
-  arrayToReturn.push(stringTempHolder);
-  arrayToReturn.push(numberTempHolder);
-  arrayToReturn.push(booleanTempHolder);
-  return arrayToReturn;
+  rtrnArr.push(strArr, numArr, boolArr);
+  return rtrnArr;
 }
+
+console.log("result:", groupArray(['hello', 34, true, false, 'goodbye', 56, 12, '25', true]));

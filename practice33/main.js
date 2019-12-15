@@ -1,11 +1,18 @@
-function invert_negatives(number){
-  if(typeof number === "number"){
-    if(number < 0){
-      return number;
+
+function invert_negatives(num){
+  if(typeof num === "number"){
+    if(num < 0){
+      return num;
     } else {
-      return  number * -1;
+      return num*-1;
+
     }
   } else {
     return false;
   }
 }
+
+
+console.log("result:", invert_negatives(-5));
+console.log("result:", invert_negatives(4000));
+console.log("result:", invert_negatives('puppies'));

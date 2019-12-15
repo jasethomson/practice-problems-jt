@@ -1,39 +1,16 @@
 
-function sort(array){
-var swap = true;
-var arrayLength = array.length -1;
-var savedArray = array;
-  while(swap){
-    // debugger;
-    swap = false;
-    for (var arrayIndex = 0; arrayIndex < arrayLength; arrayIndex++){
-      if(savedArray[arrayIndex] > savedArray[arrayIndex + 1]){
-        var tempHolder = savedArray[arrayIndex];
-        savedArray[arrayIndex] = savedArray[arrayIndex + 1];
-        savedArray[arrayIndex + 1] = tempHolder;
-        swap = true;
+function sort(arr){
+  let length = arr.length;
+  for (let index = 0; index < length; index++){
+    for(let index2 = 0; index2 < length; index2++){
+      if(arr[index2] > arr[index2 + 1]){
+        let tmp = arr[index2];
+        arr[index2] = arr[index2 + 1];
+        arr[index2 + 1] = tmp;
       }
     }
-    arrayLength--;
   }
-  return savedArray;
+  return arr;
 }
 
-
-// var swap;
-// var n = a.length - 1;
-// var x = a;
-// do {
-//   swap = false;
-//   for (var i = 0; i < n; i++) {
-//     if (x[i] < x[i + 1]) {
-//       var temp = x[i];
-//       x[i] = x[i + 1];
-//       x[i + 1] = temp;
-//       swap = true;
-//     }
-//   }
-//   n--;
-// } while (swap);
-// return x;
-// }
+console.log("result:", sort(['mouse', 'cat', 'dog', 'human']));
