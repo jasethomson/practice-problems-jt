@@ -15,3 +15,4 @@ function do_math(num1, num2, operator){
   return result;
 }
 console.log("result:",do_math(5,2,'*'));
+

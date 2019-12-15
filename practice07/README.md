@@ -5,10 +5,10 @@ Build a function that will translate text into "Pig Latin" Take the first conson
 - Write a function that takes one parameter
 	- Parameter 1 - A string
 - The function should output your input string translated into Pig Latin
-	- Example: 
+	- Example:
 		- `var myString = "Hello my name is Stu"`
 		- `translate(myString);
-		- Output - `"ellohay ymay ameya siay tusay"`
+		- Output - `"ellohay ymay amenay siay tusay"`
 
 #### Making it better!
 
@@ -16,5 +16,5 @@ Build a function that will translate text into "Pig Latin" Take the first conson
 	- There are different rules for words that start with vowel sounds or silent letters for example.
 	- <a href="http://en.wikipedia.org/wiki/Pig_Latin">Here</a> is a link to an explanation of all the rules.
 - Also try maintaining capitalization of words that are capitalized in your input string.
-	- Example: 
+	- Example:
 		- `"Hello there"` would be `"Ellohay heretay"`

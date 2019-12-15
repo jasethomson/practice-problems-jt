@@ -1,3 +1,4 @@
+
 function bipolarLoop(num1, num2){
   let i;
   let j;

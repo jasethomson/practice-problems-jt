@@ -1,3 +1,4 @@
+
 function groupArray(arr){
   const rtrnArr = [];
   const strArr = [];

@@ -1,3 +1,4 @@
+
 function random_range(start_num, end_num){
 
   if(typeof start_num === "number"){
@@ -14,3 +15,4 @@ function random_range(start_num, end_num){
 }
 
 console.log("result:", random_range(['a', 'b', 'c', 'd', 'e']));
+
