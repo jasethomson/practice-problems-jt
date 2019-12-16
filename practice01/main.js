@@ -1,12 +1,15 @@
 function biggerWords(string, array){
-  var counter = 0;
-  var arrayToReturn = [];
-  while(counter < array.length){
-    if(array[counter].length > string.length){
-      arrayToReturn.push(array[counter]);
+  const strLen = string.length;
+  const arrLen = array.length;
+  const rtrnArr = [];
+  let index = 0;
+  while(index < arrLen){
+    if(strLen < array[index].length){
+      rtrnArr.push(array[index]);
     }
-    counter++;
+    index++;
   }
-  return arrayToReturn;
+  return rtrnArr;
 }
-biggerWords('whales', ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles']);
+const myArray = ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles'];
+console.log(biggerWords("whales", myArray));
