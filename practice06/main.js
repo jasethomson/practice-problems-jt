@@ -1,15 +1,16 @@
-function fibSequence(number){
-  var counter = 0;
-  var fib1 = 0;
-  var fib2 = 1;
-  var addToArray;
-  var returnArray = [fib1, fib2];
-  while(counter<number-2){
-    addToArray = fib1 + fib2;
-    returnArray.push(addToArray);
-    fib1 = fib2;
-    fib2 = addToArray;
-    counter++;
+function fibSequence(num){
+  let index = 2;
+  let num1 = 0;
+  let num2 = 1;
+  let rtrnStr = num1 + " " + num2 + " ";
+  let num3 = 0;
+  while(index < num){
+    num3 = num1 + num2;
+    num1 = num2;
+    num2 = num3;
+    rtrnStr += (num3 + " ");
+    index++;
   }
-  return returnArray;
+  return rtrnStr;
 }
+fibSequence(12);
