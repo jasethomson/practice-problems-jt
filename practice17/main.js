@@ -1,15 +1,12 @@
 function skippy_numbers(num){
-  var arrayToReturn = [num];
-  var numPlusOne;
-  var numPlusTwo;
-  for (var currentPosition = 0; currentPosition  < 8; currentPosition += 2){
-    numPlusOne = arrayToReturn[currentPosition] + 1;
-    numPlusTwo = numPlusOne + 2;
-    arrayToReturn.push(numPlusOne,numPlusTwo);
-    if(arrayToReturn.length > 8){
-      arrayToReturn.pop();
+  const rtnArr = [num];
+  for(let i = 0; i < 7; i++){
+    num++;
+    if(i % 2 !== 0){
+      num++;
     }
+    rtnArr.push(num);
   }
-  return arrayToReturn;
+  return rtnArr;
 }
 skippy_numbers(2);
