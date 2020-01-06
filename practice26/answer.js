@@ -1,25 +1,18 @@
 function search_array(haystack, needle){
-  let needlePosition = 0;
-  const found = [];
-  while(needlePosition < needle.length){
-    let haystackPosition = 0;
-    while(haystackPosition < haystack.length){
-      if(needle[needlePosition] === haystack[haystackPosition]){
-        found.push(needle[needlePosition]);
+  const rtnArr = [];
+  for(let nI=0; nI < needle.length; nI++){
+    for(let hI=0; hI < haystack.length; hI++){
+      if(needle[nI] === haystack[hI]){
+        rtnArr.push(needle[nI]);
+        break;
       }
-      haystackPosition++;
     }
-    needlePosition++;
   }
-  return found;
+  return rtnArr;
 }
-
-
 
 
 var haystack = ['cat', 'dog', 'bird', 'turtle', 'lizard'];
 var needle = ['dog', 'lizard', 'flower', 'monkey', 'unicorn']
-var output = null;
 
-output = search_array(haystack, needle);
-console.log(output); //outputs ['dog','lizard'];
+console.log(search_array(haystack, needle));
