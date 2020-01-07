@@ -1,17 +1,15 @@
-function arrayFactors(array){
-  const returnObject = {};
-  for( let position = 0; position < array.length; position++){
-    let currentObj = array[position];
-    returnObject[currentObj] = [];
-    let nestedCounter = 0;
-    while(nestedCounter < array.length){
-      if(nestedCounter !== position){
-        if(currentObj % array[nestedCounter] === 0 )
-          returnObject[currentObj].push(array[nestedCounter]);
+function arrayFactors(arr){
+  const rtnObj = {};
+  let tmpArr = [];
+  for(let i=0; i < arr.length; i++){
+    tmpArr = [];
+    for(let j=arr[i]-1; j > 0; j--){
+      if( arr[i] % j === 0 && j !== 1){
+        tmpArr.push(j);
       }
-      nestedCounter++;
     }
+    rtnObj[arr[i]] = tmpArr;
   }
-  return returnObject;
+  return rtnObj;
 }
 console.log(arrayFactors([4, 2, 8, 6, 3, 9]));

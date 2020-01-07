@@ -1,11 +1,9 @@
 function character_convert(string){
-  let stringPosition = 0;
-  let coolString = "";
-  while(stringPosition < string.length){
-    coolString += string.charCodeAt(stringPosition);
-    stringPosition++;
+  let asciiCode = "";
+  for(let i=0; i < string.length; i++){
+    asciiCode += string.charCodeAt(i);
   }
-  return coolString;
+  return asciiCode;
 }
 
 console.log(character_convert('the cat in the hat'));
