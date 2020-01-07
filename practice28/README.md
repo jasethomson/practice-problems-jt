@@ -21,12 +21,12 @@ Build a function takes in a number and converts it to roman numerals
     - 11 is 10 plus 1, or XI
     - 56 is 50 plus 5 plus 1, or LVI
     - 67 is 50 plus 10 plus 5 plus 2, or LXVII
-  
+
 
 - Write a function that takes one parameter
 	- Parameter 1 - A number
 - The function should output an a string with the corresponding roman numerals
-- Example: 
+- Example:
 	- `var the_number = 62;`
 	- `romanNumerals(the_number);`
-	- Returns - `LXIIV`
+	- Returns - `LXII`
