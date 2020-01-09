@@ -54,3 +54,24 @@ let findNumbers = function (nums) {
   return count;
 };
 console.log(findNumbers([12, 345, 2, 6, 7896]));
+
+var calculateTime = function (keyboard, word) {
+  let pos1 = 0;
+  let pos2 = 0;
+  let time = 0;
+  for (let i = 0; i < word.length; i++) {
+    while (keyboard[pos2] !== word[i]) {
+      if (pos2 < 26) {
+        pos2++;
+      } else {
+        pos2 = 0;
+      }
+    }
+    time += (Math.abs(pos2 - pos1));
+    pos1 = pos2;
+    pos2 = 0;
+  }
+  return time;
+};
+
+console.log(calculateTime("abcdefghijklmnopqrstuvwxyz","cba"));
