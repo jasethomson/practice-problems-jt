@@ -1,23 +1,19 @@
-var oddCells = function (n, m, indices) {
+const oddCells = function (numOfArrays, numOfVals, indices) {
   const arr = [];
   let oddTotal = 0;
-  for(let i = 0; i < n; i++){
+  for (let yIndex = 0; yIndex < numOfArrays; yIndex++){
     let subArr = [];
-    for (let j = 0; j < m; j++) {
+    for (let xIndex = 0; xIndex < numOfVals; xIndex++) {
       subArr.push(0);
-      if(indices[0][0] === i){
-        subArr[j] += 1;
+      for(let incremntIndex = 0; incremntIndex < indices.length; incremntIndex++){
+        if(yIndex === indices[incremntIndex][0]){
+          subArr[xIndex] += 1;
+        }
+        if(xIndex === indices[incremntIndex][1]){
+          subArr[xIndex] += 1;
+        }
       }
-      if(indices[1][0] === i){
-        subArr[j] += 1;
-      }
-      if (indices[0][1] === j) {
-        subArr[j] += 1;
-      }
-      if (indices[1][1] === j) {
-        subArr[j] += 1;
-      }
-      if(subArr[j] % 2 !== 0){
+      if(subArr[xIndex] % 2 !== 0){
         oddTotal += 1;
       }
     }
@@ -27,7 +23,7 @@ var oddCells = function (n, m, indices) {
 };
 
 let num1 = 2;
-let num2 = 2;
-let indie = [[1, 1], [0, 0]];
+let num2 = 3;
+let indie = [[0, 1], [1, 1]];
 
 console.log(oddCells(num1, num2, indie));
