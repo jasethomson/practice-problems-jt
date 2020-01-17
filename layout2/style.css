@@ -1,0 +1,30 @@
+body {
+  background-color: lightskyblue
+}
+.cardContainer {
+  display: flex;
+  justify-content: center;
+}
+.card {
+  height: 30vh;
+  width: 24vh;
+  border: 1px solid black;
+  margin: 2% 2%;
+  border-radius: 1%;
+  background-color: lightgreen;
+}
+.image {
+  background-image: url(dog.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 14vh;
+}
+.card > h3 {
+  margin-left: 8%;
+}
+
+.text {
+  font-size: .9rem;
+  margin: 0 8%;
+}
