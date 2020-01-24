@@ -1,0 +1,28 @@
+.cardContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 300px;
+  width: 200px;
+  margin: 25px;
+}
+
+.image {
+  background-image: url(petrol.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 125px;
+}
+
+.card > h3 {
+  margin-left: 20px;
+}
+
+.text {
+  margin: 0 10px 0 20px;
+}
