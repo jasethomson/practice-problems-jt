@@ -1,11 +1,19 @@
+body {
+  margin: 0;
+}
+
 nav {
   height: 72px;
   width: 100%;
   background-color: #202125;
   position: fixed;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 0;
+}
+
+.active {
+  color: #f78333;
 }
 ul {
   list-style: none;
@@ -27,4 +35,17 @@ nav a:hover{
 
 nav img {
   height: 62px;
+  padding-left: 32px;
+}
+
+@media(max-width:900px){
+  nav ul {
+    flex-direction: column;
+    background-color: #37383f;
+    margin-top: 72px;
+    height: 180px;
+    width: 100%;
+    text-align: center;
+  }
+
 }
