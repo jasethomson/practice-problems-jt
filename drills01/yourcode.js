@@ -1,50 +1,27 @@
-function sumArray(array){
-  var index = 0;
-  var sum = 0;
-  while(index<array.length){
-    sum += array[index];
-    index++;
-  }
-  return sum;
+function sumArray(array) {
+  let total = 0;
+  array.map(num => total += num);
+  return total;
 }
 
-function fitWithinVal(array, number){
-  debugger;
-  var newArray = [];
-  var sum = 0;
-  for (var index = 0;index<array.length; index++){
-    sum += array[index];
-    if(sum < number){
-      newArray.push(array[index]);
-    } else {
-      sum -= array[index];
+function fitWithinVal(array, number) {
+  let total = 0, newArr = [];
+  array.map(num => {
+    if (total + num <= number) {
+      total += num;
+      newArr.push(num);
     }
-  }
-
-  return newArray;
+  });
+  return newArr;
 }
-function getAllNamesShorterThan(array, value){
-
-  var newArray = [];
-  for(var index =0; index<array.length; index++){
-    var name = array[index];
-    if(name.length < value ){
-      newArray.push(name);
-    }
-  }
-  return newArray;
+function getAllNamesShorterThan(array, value) {
+  let newArr = [];
+  array.map((name, index) => {
+    if (name.length < value) newArr.push(name);
+  });
+  return newArr;
 }
 
-function makeLabel(object){
-  var familyName = (object.familyName);
-  var givenName = (object.givenName);
-  var greeting = (object.greeting);
-  var streetNumber = (object['home address'].streetNumber);
-  var streetName = (object['home address'].streetName);
-  var city = (object['home address'].city);
-  var state = (object['home address'].state);
-  var zip = (object['home address'].zip);
-  var name = greeting + ' ' + givenName + ' ' + familyName + '\n';
-  var streetAddress = streetNumber + ' ' + streetName + '\n' + city + ', ' + state + ' ' + zip;
-  return(name + streetAddress);
+function makeLabel(object) {
+  return `${object.greeting} ${object.givenName} ${object.familyName}\n${object['home address'].streetNumber} ${object['home address'].streetName}\n${object['home address'].city}, ${object['home address'].state} ${object['home address'].zip}`;
 }
