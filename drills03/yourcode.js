@@ -12,8 +12,7 @@ function getPath(pathString) {
 }
 
 // - getPathParts: Given a full URL string, break it up into parts in an object For
-//   - example: 'http://localhost:8000/happy/go/lucky/file.html'
-//     - return { protocol: 'http', host: 'localhost', port: 8000, path: '/happy/go/lucky', file: 'file.html' }
+//   - example: 'http://localhost:8000/happy/go/lucky/file.html'//     - return { protocol: 'http', host: 'localhost', port: 8000, path: '/happy/go/lucky', file: 'file.html' }
 
 function getPathParts(url) {
   const protocol = url.split(':')[0];
@@ -37,9 +36,19 @@ function getPathParts(url) {
   }
 }
 
+
+
 //       - getCapitalCount: given an array of words, return a count of how many start with capital letters, For
 //         - example: ['it', 'will', 'not', 'Be', 'long', 'Till', 'we', 'Are']
 //           - returns: 3
+
+function getCapitalCount(arr) {
+  let capitalCount = 0;
+  arr.map(word => {
+    if (word[0].charCodeAt() < 97) capitalCount++;
+  });
+  return capitalCount;
+}
 
 //             - correctCalcChecker: Given an array of objects with math equations, return all objects that have correct equations for
 // 	- example: [
@@ -52,10 +61,6 @@ function getPathParts(url) {
 //     { num1: 12, num2: 4, op: '-', result: 8 },
 //     { num1: 2, num2: 3, op: '+', result: 5 }
 //     ]
-
-function getCapitalCount() {
-
-}
 
 function correctCalcChecker() {
 
