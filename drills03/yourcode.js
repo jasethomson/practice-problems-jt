@@ -62,10 +62,27 @@ function getCapitalCount(arr) {
 //     { num1: 2, num2: 3, op: '+', result: 5 }
 //     ]
 
-function correctCalcChecker() {
-
-}
-
-function doMath() {
-
+function correctCalcChecker(equations) {
+  const correctEquations = [];
+  equations.map(equation => {
+    let result = null;
+    switch (equation.op) {
+      case '+':
+        result = equation.num1 + equation.num2;
+        break;
+      case '-':
+        result = equation.num1 - equation.num2;
+        break;
+      case '*':
+        result = equation.num1 + equation.num2;
+        break;
+      case '/':
+        result = equation.num1 + equation.num2;
+        break;
+      default:
+        return alert("No operation given");
+    }
+    if (result === equation.result) correctEquations.push(equation);
+  });
+  return correctEquations;
 }
