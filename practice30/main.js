@@ -1,18 +1,10 @@
 
-function random_range(start_num, end_num){
-
-  if(typeof start_num === "number"){
-    let rndmNum = Math.floor(Math.random() * (end_num - start_num + 1) + start_num);
-    while (rndmNum === start_num || rndmNum === end_num) {
-      rndmNum = Math.floor(Math.random() * (end_num - start_num + 1) + start_num);
-    }
-    return rndmNum;
-  } else {
-    let rndmSelection = Math.floor(Math.random() * ((start_num.length-1) + 1));
-    return start_num[rndmSelection];
-  }
-
+function random_range(start_num, end_num) {
+  if (end_num) return parseInt(Math.random() * (end_num - start_num) + start_num);
+  return start_num[parseInt(Math.random() * start_num.length)];
 }
 
-console.log("result:", random_range(['a', 'b', 'c', 'd', 'e']));
 
+console.log("2,15", random_range(2, 15));
+console.log("1,100", random_range(1, 100));
+console.log("result:", random_range(['a', 'b', 'c', 'd', 'e']));
