@@ -1,18 +1,15 @@
-function do_math(num1, num2, operator){
-  let result;
-  switch(operator){
-    case '+': result = num1 + num2;
-      break;
-    case '-': result = num1 - num2;
-      break;
+function do_math(num1, num2, operator) {
+  switch (operator) {
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
     case '*':
     case 'x':
-    case 'X': result = num1 * num2;
-      break;
-    case '/': result = num1 / num2;
-      break;
+    case 'X':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;
   }
-  return result;
 }
-console.log("result:",do_math(5,2,'*'));
-
+console.log("result:", do_math(5, 2, '*'));
